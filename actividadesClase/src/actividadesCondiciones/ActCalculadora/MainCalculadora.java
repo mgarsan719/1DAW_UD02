@@ -15,13 +15,13 @@ public class MainCalculadora
 
 		System.out.println("Introduce el primer numero: ");
 		calc.setNum1(sc.nextDouble());
-		
+
 		System.out.println("Introduce operador (+, -, *, /): ");
 		calc.setOperador(sc.next());
 
 		System.out.println("Introduce el segundo numero: ");
 		calc.setNum2(sc.nextDouble());
-		
+
 		calc.calcular();
 
 	}

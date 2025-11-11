@@ -1,14 +1,12 @@
-package actividadesBucles.ActsWhile;
+package actividadesBucles.ActsDoWhile;
 
 import java.util.Scanner;
 
-public class MainSumatorioPromedio
+public class MainSumatorioPromedioDoWhile
 {
-
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
-
 		Scanner sc = new Scanner(System.in);
 
 		int suma = 0;
@@ -17,7 +15,7 @@ public class MainSumatorioPromedio
 
 		int numIntroducido = 0;
 
-		while (numIntroducido < 10)
+		do
 		{
 			int num = 0;
 			System.out.println("Introduzca un número para sumarlo: ");
@@ -26,7 +24,7 @@ public class MainSumatorioPromedio
 			suma = suma + num;
 
 			numIntroducido++;
-		}
+		} while (numIntroducido < 10);
 
 		promedio = suma * 1.0 / numIntroducido;
 
@@ -35,5 +33,4 @@ public class MainSumatorioPromedio
 
 		sc.close();
 	}
-
 }

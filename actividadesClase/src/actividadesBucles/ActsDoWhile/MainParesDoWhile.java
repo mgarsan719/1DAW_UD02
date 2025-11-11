@@ -1,8 +1,8 @@
-package actividadesBucles.ActsWhile;
+package actividadesBucles.ActsDoWhile;
 
 import java.util.Scanner;
 
-public class MainPares
+public class MainParesDoWhile
 {
 
 	public static void main(String[] args)
@@ -11,9 +11,9 @@ public class MainPares
 
 		Scanner sc = new Scanner(System.in);
 
-		int num = 1;
+		int num;
 
-		while (num != 0)
+		do
 		{
 			System.out.println("Introduce un numero: ");
 			num = sc.nextInt();
@@ -27,7 +27,7 @@ public class MainPares
 			{
 				System.out.printf("El numero %d es impar \n", num);
 			}
-		}
+		} while (num != 0);
 
 		sc.close();
 	}

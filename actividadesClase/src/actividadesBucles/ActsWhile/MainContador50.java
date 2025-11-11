@@ -11,7 +11,7 @@ public class MainContador50
 
 		while (a <= 50)
 		{
-			if(a%2==0) 
+			if (a % 2 == 0)
 			{
 				System.out.println(a);
 			}
