@@ -1,4 +1,4 @@
-package actividadesBucles;
+package actividadesBucles.ActsWhile;
 
 public class MainContador50
 {
