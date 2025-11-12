@@ -16,9 +16,10 @@ public class MainPedirPeli
 		for(int i=0;i<a;i++) 
 		{
 			System.out.println("¿Hoy vamos a ver una peli, Vladi?");
-			
 			System.out.println("No.");
 		}
+		
+		sc.close();
 	}
 
 }
