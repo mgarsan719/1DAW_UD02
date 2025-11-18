@@ -73,61 +73,100 @@ public class Complejidad
 		 * mala suerte. Este método imprime por pantalla si un número introducido por el
 		 * usuario es afortunado o no.
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("Dame el numero para saber si es afortunado o no: ");
-		int numero= sc.nextInt();
-		
-		int numAfor=0;
-		int numDesafor=0;
-				
-		while(numero>0) 
+		int numero = sc.nextInt();
+
+		int numAfor = 0;
+		int numDesafor = 0;
+
+		while (numero > 0)
 		{
-			int cifra=numero%10;
-			numero=numero/10;
-			
-			if(cifra==3 || cifra==7 || cifra==8 || cifra==9)
+			int cifra = numero % 10;
+			numero = numero / 10;
+
+			if (cifra == 3 || cifra == 7 || cifra == 8 || cifra == 9)
 			{
 				numAfor++;
 			}
-			
-			else if(cifra==0 || cifra==1 || cifra==2 || cifra==4 || cifra==5 || cifra==6)
+
+			else if (cifra == 0 || cifra == 1 || cifra == 2 || cifra == 4 || cifra == 5 || cifra == 6)
 			{
 				numDesafor++;
 			}
 		}
-		
-		if(numAfor>numDesafor) 
+
+		if (numAfor > numDesafor)
 		{
 			System.out.println("Tu numero es afortunado");
-		}
+		} 
+		
 		else
 		{
 			System.out.println("Tu numero es desafortunado");
 		}
-		
+
 		sc.close();
 
 	}
-	
-	public static void validaPassword() 
+
+	public static void validaPassword()
 	{
-		int mayus=0;
-		int minus=0;
-		int nums=0;
-		int esp=0;
-		
+		int mayus = 0;
+		int minus = 0;
+		int nums = 0;
+		int esp = 0;
+
 		Scanner sc = new Scanner(System.in);
+		String pass;
 
-		System.out.println("Ingrese una contraseña: ");
-		String pass=sc.next();
-		
-		for(int i=0;i<pass.length();i++) 
+		do
 		{
-			String caracter=pass.substring(i, i+1);
-			
-		}
-	}
+			mayus = 0;
+			minus = 0;
+			nums = 0;
+			esp = 0;
 
+			System.out.println("Ingrese una contraseña: ");
+			pass = sc.next();
+
+			for (int i = 0; i < pass.length(); i++)
+			{
+				String caracter = pass.substring(i, i + 1);
+
+				if (caracter.matches("[A-Z]"))
+				{
+					mayus++;
+				} 
+				
+				else if (caracter.matches("[a-z]"))
+				{
+					minus++;
+				} 
+				
+				else if (caracter.matches("[0-9]"))
+				{
+					nums++;
+				} 
+				
+				else if (caracter.matches("[@#~*%&/]"))
+				{
+					esp++;
+				}
+			}
+
+			if (minus >= 2 && mayus >= 2 && nums >= 2 && esp >= 2)
+			{
+				System.out.println("La contraseña es válida");
+			} 
+			
+			else
+			{
+				System.out.println("Contraseña invalida, vuelve a intentarlo");
+			}
+			
+		} while (!(minus >= 2 && mayus >= 2 && nums >= 2 && esp >= 2));
+	}
 }

@@ -9,7 +9,6 @@ public class MainComplejidad
 
 		Complejidad c1 =new Complejidad();
 		
-		c1.numerosAfortunados();
-	
+		c1.validaPassword();
 	}
 }

@@ -28,8 +28,7 @@ public class MainValidarVocales
 			{
 				System.out.println("El o los caracteres introducidos no son una vocal");
 			}
-		} while (!(letra.equals("a") && letra.equals("e") && letra.equals("i") && letra.equals("o")
-				&& letra.equals("u")));
+		} while (!(letra.equals("a") && letra.equals("e") && letra.equals("i") && letra.equals("o") && letra.equals("u")));
 	}
 
 }
